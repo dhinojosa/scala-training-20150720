@@ -2,55 +2,58 @@ Scala (Day 1)
    -------------
    - Introduction
 
-   What is Scala? 
-   What are the positives of Scala? 
-   What are the negatives of Scala? 
+   What is Scala?  ✓
+   What are the positives of Scala? ✓
+   What are the negatives of Scala? ✓
 
    - Setup
 
-   Creating a script in Scala 
-   Creating an application in Scala 
-
+   Creating a script in Scala ✓
+   Creating an application in Scala ✓
+   REPL ✓
 
    - Scala Basics  
-   `val` and `var`
-   lazy val 
-   Bending Variables and Values to your Will! 
-   Byte, Short, Int, Long, Floats, Booleans, and Doubles 
-   if, else if, else, while, do while, for "loops" 
-   String formatting and interpolation 
-
+   `val` and `var` ✓
+   lazy val ✓
+   Bending Variables and Values to your Will! ✓
+   Byte, Short, Int, Long, Floats, Booleans, and Doubles ✓
+   if, else if, else, while, do while, for "loops" ✓
+   String formatting and interpolation and Multiline ✓
 
    - Scala Methods 
-   Basic Methods 
-   Different Return Types 
-   About `Unit` and Conventions 
-   Recursion 
-   Name Flexibility 
-   Right-Associative Colons
-   Bending Method Names To Your Will!
-   Operator Overloading
-   Parameterized Types on Methods
+   Basic Methods ✓
+   Different Return Types ✓
+   About `Unit` and Conventions ✓
+   Recursion ✓
+   Name Flexibility ✓
+   Right-Associative Colons ✓
+   Operator Overloading ✓
+   Parameterized Types on Methods ✓
 
-   - Scala Classes
-   Classes 
-   Constructors 
-   Case Classes 
-   Subclassing
-   Parameterized Types on Classes
-   Determining Instances 
-   Casting 
-   Preconditions 
-   Primitives Are Objects
-   Any, AnyVal, AnyRef 
 
 Scala (Day 2)
-   -------------
-   -- Scala `Object` 
-   Singletons
-   Companion Objects 
+-------------
+   
+   - Scala Classes
+   Classes ✓
+   Constructors ✓ 
+   Case Classes ✓
+   Subclassing ✓
+   Parameterized Types on Classes ✓
+   Determining Instances ✓
+   Casting ✓
+   Preconditions ✓ 
+   Primitives Are Objects ✓ 
+   Any, AnyVal, AnyRef ✓
 
-   -- The magic `apply` method 
+   -------------
+   -- Scala `Object`
+    
+   Singletons ✓
+   The Main Method ✓
+   Companion Objects ✓ 
+   
+   -- The magic `apply` method  ✓
 
    -- Scala `Option` 
    `Some`
