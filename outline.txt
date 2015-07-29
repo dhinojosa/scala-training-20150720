@@ -96,16 +96,16 @@ Day 3
    Basic Extractors Using Objects 
    List Pattern Matching ✓
    Existential Types ✓
-   Multiple Extractor Methods in an Object
-   Extractor Methods in a Class 
-   Revisiting the Regular Expressions
+   Multiple Extractor Methods in an Object ✓
+   Extractor Methods in a Class ✓
+   Revisiting the Regular Expressions ✓
    Companion Object Extractors and Case Classes ✓
 
 Day 4:
    -- Traits
-   Basic Traits
-   Extending vs. With
-   Mixins
+   Basic Traits ✓
+   Extending vs. With ✓
+   Mixins ✓
    Stackable Traits
    
    -- Implicits

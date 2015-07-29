@@ -27,6 +27,15 @@ println(b)
 
 class Employee(val firstName:String, val lastName:String, val awards:List[String]) {
     def this(firstName:String, lastName:String) = this(firstName, lastName, Nil)
+    
+    def unapply(s:String) = {
+        val array = s.split(",")
+        Some(array(0), array(1))
+    }
+
+    def unapply(t:(Int, String, Int)) = {
+        Some(t._1 + t._3, t._2)
+    }
 }
 
 val Employee(fn, ln) = new Employee("Jim", "Lobster")
@@ -86,4 +95,52 @@ println(secondAndThird(List(10,11,23)))
 println(secondAndThird(List(10,11)))
 println(secondAndThird(List()))
 
+def optionMax(xs:List[Int]):Option[Int] = {
+   xs match {
+      case List() => None
+      case List(x) => Some(x)
+      case List(x,y@_*) => {
+        val ys = optionMax(y.toList)
+        if (x > ys.get) Some(x) else ys
+      }
+   }
+}
 
+println(optionMax(Nil))
+println(optionMax(List(1003)))
+println(optionMax(List(1003, 4003)))
+println(optionMax(List(1003, 4003, 2003, 800, 20, 300)))
+
+def optionMaxV2(xs:List[Int]):Option[Int] = {
+   xs match {
+      case Nil => None
+      case x :: Nil => Some(x)
+      case x :: y => {
+        val ys = optionMaxV2(y.toList)
+        if (x > ys.get) Some(x) else ys
+      }
+   }
+}
+
+println(optionMaxV2(Nil))
+println(optionMaxV2(List(1003)))
+println(optionMaxV2(List(1003, 4003)))
+println(optionMaxV2(List(1003, 4003, 2003, 800, 20, 300)))
+
+val roger = new Employee("Roger", "Rabbit")
+
+def matchSomeString(x:String) = {
+    x match {
+      case roger(a, b) => s"I got a: $a and I got b: $b"
+    }
+}
+
+println(matchSomeString("Mayur, Anand"))
+
+val roger(fst,snd) = "Hello, Dolly"
+println(fst)
+println(snd)
+
+val roger(p1, p2) = (13, "Whoa", 19)
+println(p1)
+println(p2)
