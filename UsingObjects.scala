@@ -7,7 +7,7 @@ class Employee (firstName:String, lastName:String, private val salary:BigInt) {
 
 object Employee {
    //Shared variable
-   var instances = 0
+   private var instances = 0
 
    //Factory
    def createGentlemanEmployee(firstName:String, lastName:String) = 
@@ -15,14 +15,16 @@ object Employee {
 
    //Helper & Access to private member information
    def tellMeTheirSecretSalary(e:Employee) = e.salary 
+
+   def numberInstances = instances
 }
 
 object UsingObjects extends App {
    val employee = Employee.createGentlemanEmployee("Viddu", "Devigere")
    println(employee)
    println(Employee.tellMeTheirSecretSalary(employee))
-   println(Employee.instances)
+   println(Employee.numberInstances)
 
    val employee2 = Employee.createGentlemanEmployee("Rajiv", "Lewis")
-   println(Employee.instances)
+   println(Employee.numberInstances)
 }
