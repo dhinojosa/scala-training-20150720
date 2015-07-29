@@ -1,18 +1,24 @@
+trait Smellable {
+   def smellsLike:String
+}
+
 trait Loggable {
    var s = Nil:List[String]
    
    def log(x:String) = {
-       s = s :+ x
+       s = s :+ (getClass.getSimpleName + ":" + x)
    }
 
    def log = s.mkString("\n")
 }
 
-class Calculator extends Loggable {
+class Calculator extends Loggable with Smellable {
    def add(x:Int, y:Int) = {
        log("Adding " + x)
        x + y
    }
+
+   def smellsLike = "Chicken"
 }
 
 val calc = new Calculator()
@@ -86,4 +92,61 @@ println(dept.log)
 
 val toys = new Department("Toys")
 //toys.log("Uhm, Hello") WRONG
+
+trait IntQueue {
+    def get(): Int
+    def put(x: Int):Unit
+}
+
+import scala.collection.mutable.ArrayBuffer
+
+class BasicIntQueue extends IntQueue {
+    private val buf = new ArrayBuffer[Int]
+    def get() = buf.remove(0)
+    def put(x: Int) { buf += x }
+}
+
+trait Doubling extends IntQueue {
+   abstract override def put(x: Int) { super.put(2 * x) }
+}
+
+trait Incrementing extends IntQueue {
+    abstract override def put(x: Int) { super.put(x + 1) }
+}
+
+trait Filtering extends IntQueue {
+    abstract override def put(x: Int) {
+      if (x >= 0) super.put(x)
+    }
+}
+
+val queue = new BasicIntQueue with Doubling with Incrementing with Filtering
+
+queue.put(4)
+queue.put(3)
+println(queue.get) //10
+
+
+//
+//trait Abs extends IntQueue {
+//   abstract override def put(x:Int) = {
+//     super.put(2 * x)
+//     x * 100
+//   }
+//}
+//
+//val a = new Abs(){
+//   abstract override def put(x:Int) = println(x)
+//   abstract override def get() = {println("get"); 10}
+//}
+//
+//println(a.put(10))
+
+object MySingleton extends Loggable
+MySingleton.log("Hello There")
+println(MySingleton.log)
+
+val b = new Object with Loggable
+b.log("Testing with a plain object")
+
 
