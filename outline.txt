@@ -55,25 +55,77 @@ Scala (Day 2)
    
    -- The magic `apply` method  ✓
 
-   -- Scala `Option` 
-   `Some`
-   `None`
+   -- Scala `Option` ✓ 
+   `Some`           ✓
+   `None`           ✓
 
-   -- Scala Tuples
+   -- Scala Tuples  ✓
 
    -- Basic Collections
-   Lists
-   Maps
-   Sets
-   Arrays and Repeated Parameters
-   Strings
-   Ranges
-   Streams
+   Lists ✓
+   Maps ✓
+   Sets ✓
+   Arrays and Repeated Parameters ✓
+   Strings ✓
+   Ranges ✓
+   Streams ✓
 
    -- Higher Order Functions
-   Creating a function
-   What is actually a function? 
-   Is it a method or is it a function?
-   Closures
-   Functions returning other functions
-   By-Name Parameters
+   Creating a function ✓
+   What is actually a function? ✓
+    
+Day 3 
+   -- More about Functions
+   Is it a method or is it a function? ✓
+   Closures ✓
+   Functions returning other functions ✓
+   Converting a method to a function ✓
+   Function Method Parameters ✓
+   Curried Functions ✓
+   Curried Method Parameters ✓
+   Fold Left, Fold Right ✓
+   By-Name Parameters ✓ (Try again)
+   For Comprehensions & Monads ✓
+   Partially Applied Functions ✓
+   Partial Functions (Delay)
+
+   -- Pattern Matching ✓
+   Regular Pattern Matching ✓
+   Tuple Pattern Matching ✓
+   Regular Expression Pattern Matching ✓
+   Basic Extractors Using Objects 
+   List Pattern Matching ✓
+   Existential Types ✓
+   Multiple Extractor Methods in an Object
+   Extractor Methods in a Class 
+   Revisiting the Regular Expressions
+   Companion Object Extractors and Case Classes ✓
+
+Day 4:
+   -- Traits
+   Basic Traits
+   Extending vs. With
+   Mixins
+   Stackable Traits
+   
+   -- Implicits
+   Implicit Values and Parameters
+   Implicit Wrappers and Implicit Classes
+   Implicit Converters
+   Creating your own Ordering
+    
+Day 5 
+   -- Actors
+   Creating a project with SBT or Maven
+   Importing Akka
+   Creating an Actor
+   Thread Pooling
+   Futures 
+   Asking an Actor
+   Remote Actors
+   
+   -- Miscellanous Scala
+   Pick and Choose:
+   Generics 
+   Infix Types
+   Type Tags

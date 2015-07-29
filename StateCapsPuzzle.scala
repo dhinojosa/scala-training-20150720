@@ -48,3 +48,28 @@ Olympia,Washington
 Charleston,West Virginia
 Madison,Wisconsin
 Cheyenne,Wyoming"""
+
+//1. Parse the new line out of text
+//2. Put into a List
+//3. Split out the capital city using comma delimiter
+//4. Find the predicate based on Regex likely using filter
+//5. Return the city
+
+val regex = """[^aeiouAEIOU ]{4}""".r
+println(capitals.split("\n"). //Parse the news
+        view.
+        toList.               //Put into a List
+        map(_.split(",").toList). //Split the capital city using comma
+        map(_(0)).
+        filter(regex.findAllIn(_).toList != Nil)(0)) //Find the pred.
+
+println(capitals.split("\n"). //Parse the news
+        view.
+        toList.               //Put into a List
+        map(_.split(",").toList). //Split the capital city using comma
+        map(_(0)).
+        filter(regex.findAllIn(_).toList != Nil)) //Find the pred.
+
+
+
+
