@@ -109,9 +109,9 @@ Day 4:
    Stackable Traits
    
    -- Implicits
-   Implicit Values and Parameters
-   Implicit Wrappers and Implicit Classes
-   Implicit Converters
+   Implicit Values and Parameters ✓
+   Implicit Wrappers and Implicit Classes ✓
+   Implicit Converters ✓
    Creating your own Ordering
     
 Day 5 
